@@ -9,10 +9,10 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HelloComponent } from './components/sidebar/hello.component';
 import { MaterialModule } from './modules/material/material.module';
 import { SharedDataService } from './services/shared-data.service'
 import { SidebarModule } from 'ng-sidebar';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   imports: [
@@ -27,7 +27,7 @@ import { SidebarModule } from 'ng-sidebar';
     // Material Modules in './modules/material/material.module'
     MaterialModule
     ],
-  declarations: [AppComponent, HeaderComponent, FooterComponent,HelloComponent,],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, SidebarComponent,],
   bootstrap: [AppComponent],
   providers: [SharedDataService,OverlayContainer]
 })

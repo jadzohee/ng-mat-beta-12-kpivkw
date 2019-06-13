@@ -1,14 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import {FormControl} from '@angular/forms';
+import { SharedDataService } from './../../services/shared-data.service';
 
 @Component({
   selector: 'solution-sidebar',
-  templateUrl: 'sidebar.component.html',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.css'],
 })
-
 export class SidebarComponent {
-    private googleUrl:string = 'https://plus.google.com/+MuhammadFaisal04';
-  constructor() { }
+  mode = new FormControl('over');
 
-  ngOnInit() {
+  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+
+  constructor(private readonly _sharedDataService: SharedDataService) { }
+
+  onThemeChange(event){
+    this._sharedDataService.OnThemeSwitch.next(event.checked);
   }
 }

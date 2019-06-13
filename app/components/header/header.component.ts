@@ -10,11 +10,8 @@ export class HeaderComponent {
   private title = 'Salut c est Cool';
   @Input() angularVersion: string = '';
   @Input() materialVersion: string = '';
-  private websiteUrl: string = 'https://iamfaisal.live/';  
+  private websiteUrl: string = 'https://google.com/';  
   // -----------------------------------------------------------------------//
   constructor(private readonly _sharedDataService: SharedDataService) { }
 
-  onThemeChange(event){
-    this._sharedDataService.OnThemeSwitch.next(event.checked);
-  }
 }

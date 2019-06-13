@@ -10,32 +10,14 @@
 		  </solution-header>
 		</div>
     <!-- Container for sidebar(s) + page content -->
-    <ng-sidebar-container id="sidebarMenu" style="height: 200vh;" hasBackdrop="true" >
-
-    <!-- A sidebar -->
-    <ng-sidebar [(opened)]="_opened" position="left" mode="push">
-      <ul>
-        <li>Menu Item</li>
-        <br>
-        <li>Menu Item</li>
-         <br>
-        <li>Menu Item</li>
-      </ul>
-    </ng-sidebar>
-
-    <!-- Page content -->
-    <div ng-sidebar-content>
-      <button (click)="_toggleSidebar()" mat-icon-button mat-raised-button >
-        <mat-icon>view_headline</mat-icon>
-      </button>
+    <div fxFlex="grow">
+      <solution-sidebar>
+      </solution-sidebar>
     </div>
-    
-  </ng-sidebar-container>
 		<!-- Footer ------------------------------------------------------------------------->
 		<div fxFlex="none">
 			<solution-footer></solution-footer> 
 		</div>
 		<!----------------------------------------------------------------------------------->
-    
 	</div>
 </div>
