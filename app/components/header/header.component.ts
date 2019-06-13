@@ -7,7 +7,7 @@ import { SharedDataService } from './../../services/shared-data.service';
 })
 export class HeaderComponent {
   // -----------------------------------------------------------------------//
-  private title = 'Salut c est Cool';
+  private title = 'Jadzohee';
   @Input() angularVersion: string = '';
   @Input() materialVersion: string = '';
   private websiteUrl: string = 'https://google.com/';  
