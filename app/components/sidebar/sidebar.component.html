@@ -1,8 +1,10 @@
-<mat-sidenav-container class="sidebar-container"  style="height:90vh ;" *ngIf="shouldRun">
+<mat-sidenav-container class="sidebar-container"  style="height:86vh ;" *ngIf="shouldRun">
   <mat-sidenav #sidenav mode="push">
     <p><button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button></p>
-    <p>test 1 2 3 4 5 </p>
-    <p>6 7 8 9</p>
+    <p><button mat-button ><mat-icon>mic_none</mat-icon></button></p>
+    <p><button mat-button ><mat-icon>music_video</mat-icon></button></p>
+    <p><button mat-button ><mat-icon>forum</mat-icon></button></p>
+    <p><button mat-button name="btnlang"><mat-icon>language</mat-icon></button></p>
   </mat-sidenav>
   <mat-sidenav-content>
     <p><button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
